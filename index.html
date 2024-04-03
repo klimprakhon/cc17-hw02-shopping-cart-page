@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>HW02 - Shopping Cart</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <img
+            src="https://www.jobpasscard.com/static/images/new_Jobpasscard/jobpasscard-logo-nav.png"
+            alt="JobPasscard"
+            class="logo"
+          />
+        </div>
+        <div class="nav-center">
+          <a href="#">ABOUT US</a>
+          <a href="#">PASSCARD</a>
+          <a href="#">PROFILE</a>
+        </div>
+        <div class="nav-right">
+          <svg
+            width="40px"
+            class="search"
+            fill="#a3adc2"
+            viewBox="0 0 64 64"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xml:space="preserve"
+            xmlns:serif="http://www.serif.com/"
+            style="
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+              stroke-linejoin: round;
+              stroke-miterlimit: 2;
+            "
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <rect
+                id="Icons"
+                x="-640"
+                y="-128"
+                width="1280"
+                height="800"
+                style="fill: none"
+              ></rect>
+              <g id="Icons1" serif:id="Icons">
+                <g id="Strike"></g>
+                <g id="H1"></g>
+                <g id="H2"></g>
+                <g id="H3"></g>
+                <g id="list-ul"></g>
+                <g id="hamburger-1"></g>
+                <g id="hamburger-2"></g>
+                <g id="list-ol"></g>
+                <g id="list-task"></g>
+                <g id="trash"></g>
+                <g id="vertical-menu"></g>
+                <g id="horizontal-menu"></g>
+                <g id="sidebar-2"></g>
+                <g id="Pen"></g>
+                <g id="Pen1" serif:id="Pen"></g>
+                <g id="clock"></g>
+                <g id="external-link"></g>
+                <g id="hr"></g>
+                <g id="info"></g>
+                <g id="warning"></g>
+                <g id="plus-circle"></g>
+                <g id="minus-circle"></g>
+                <g id="vue"></g>
+                <g id="cog"></g>
+                <g id="logo"></g>
+                <g id="radio-check"></g>
+                <g id="eye-slash"></g>
+                <g id="eye"></g>
+                <g id="toggle-off"></g>
+                <g id="shredder"></g>
+                <path
+                  d="M39.94,44.142c-3.387,2.507 7.145,-8.263 4.148,-4.169c0.075,-0.006 -0.064,0.221 -0.53,0.79c0,0 8.004,7.95 11.933,11.996c1.364,1.475 -1.097,4.419 -2.769,2.882c-3.558,-3.452 -11.977,-12.031 -11.99,-12.045l-0.792,0.546Z"
+                ></path>
+                <path
+                  d="M28.179,48.162c5.15,-0.05 10.248,-2.183 13.914,-5.806c4.354,-4.303 6.596,-10.669 5.814,-16.747c-1.34,-10.415 -9.902,-17.483 -19.856,-17.483c-7.563,0 -14.913,4.731 -18.137,11.591c-2.468,5.252 -2.473,11.593 0,16.854c3.201,6.812 10.431,11.518 18.008,11.591c0.086,0 0.172,0 0.257,0Zm-0.236,-3.337c-7.691,-0.074 -14.867,-6.022 -16.294,-13.648c-1.006,-5.376 0.893,-11.194 4.849,-15.012c4.618,-4.459 11.877,-5.952 17.913,-3.425c5.4,2.261 9.442,7.511 10.187,13.295c0.638,4.958 -1.141,10.154 -4.637,13.733c-3.067,3.14 -7.368,5.014 -11.803,5.057c-0.072,0 -0.143,0 -0.215,0Z"
+                  style="fill-rule: nonzero"
+                ></path>
+                <g
+                  id="spinner--loading--dots-"
+                  serif:id="spinner [loading, dots]"
+                ></g>
+                <g id="react"></g>
+                <g id="check-selected"></g>
+                <g id="turn-off"></g>
+                <g id="code-block"></g>
+                <g id="user"></g>
+                <g id="coffee-bean"></g>
+                <g id="coffee-beans">
+                  <g id="coffee-bean1" serif:id="coffee-bean"></g>
+                </g>
+                <g id="coffee-bean-filled"></g>
+                <g id="coffee-beans-filled">
+                  <g id="coffee-bean2" serif:id="coffee-bean"></g>
+                </g>
+                <g id="clipboard"></g>
+                <g id="clipboard-paste"></g>
+                <g id="clipboard-copy"></g>
+                <g id="Layer1"></g>
+              </g>
+            </g>
+          </svg>
+          <div class="in-cart">
+            <svg
+              width="40px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M2 3L2.26491 3.0883C3.58495 3.52832 4.24497 3.74832 4.62248 4.2721C5 4.79587 5 5.49159 5 6.88304V9.5C5 12.3284 5 13.7426 5.87868 14.6213C6.75736 15.5 8.17157 15.5 11 15.5H19"
+                  stroke="#a3adc2"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                ></path>
+                <path
+                  d="M7.5 18C8.32843 18 9 18.6716 9 19.5C9 20.3284 8.32843 21 7.5 21C6.67157 21 6 20.3284 6 19.5C6 18.6716 6.67157 18 7.5 18Z"
+                  stroke="#a3adc2"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M16.5 18.0001C17.3284 18.0001 18 18.6716 18 19.5001C18 20.3285 17.3284 21.0001 16.5 21.0001C15.6716 21.0001 15 20.3285 15 19.5001C15 18.6716 15.6716 18.0001 16.5 18.0001Z"
+                  stroke="#a3adc2"
+                  stroke-width="1.5"
+                ></path>
+                <path
+                  d="M5 6H16.4504C18.5054 6 19.5328 6 19.9775 6.67426C20.4221 7.34853 20.0173 8.29294 19.2078 10.1818L18.7792 11.1818C18.4013 12.0636 18.2123 12.5045 17.8366 12.7523C17.4609 13 16.9812 13 16.0218 13H5"
+                  stroke="#a3adc2"
+                  stroke-width="1.5"
+                ></path>
+              </g>
+            </svg>
+            <div class="product-count">1</div>
+          </div>
+          <a href="#">LOGIN</a>
+          <a href="#">SIGN UP</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>My Cart</h1>
+      <div class="shopping-cart">
+        <div class="product-list">
+          <div class="product-card">
+            <div class="product-icon">
+              <svg
+                width="36px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M5.73708 6.54391V18.9857C5.73708 19.7449 6.35257 20.3604 7.11182 20.3604H16.8893C17.6485 20.3604 18.264 19.7449 18.264 18.9857V6.54391M2.90906 6.54391H21.0909"
+                    stroke="#5FDDB6"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M8 6V4.41421C8 3.63317 8.63317 3 9.41421 3H14.5858C15.3668 3 16 3.63317 16 4.41421V6"
+                    stroke="#5FDDB6"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="course-card">
+              <svg
+                width="30px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M15.3929 4.05365L14.8912 4.61112L15.3929 4.05365ZM19.3517 7.61654L18.85 8.17402L19.3517 7.61654ZM21.654 10.1541L20.9689 10.4592V10.4592L21.654 10.1541ZM3.17157 20.8284L3.7019 20.2981H3.7019L3.17157 20.8284ZM20.8284 20.8284L20.2981 20.2981L20.2981 20.2981L20.8284 20.8284ZM14 21.25H10V22.75H14V21.25ZM2.75 14V10H1.25V14H2.75ZM21.25 13.5629V14H22.75V13.5629H21.25ZM14.8912 4.61112L18.85 8.17402L19.8534 7.05907L15.8947 3.49618L14.8912 4.61112ZM22.75 13.5629C22.75 11.8745 22.7651 10.8055 22.3391 9.84897L20.9689 10.4592C21.2349 11.0565 21.25 11.742 21.25 13.5629H22.75ZM18.85 8.17402C20.2034 9.3921 20.7029 9.86199 20.9689 10.4592L22.3391 9.84897C21.9131 8.89241 21.1084 8.18853 19.8534 7.05907L18.85 8.17402ZM10.0298 2.75C11.6116 2.75 12.2085 2.76158 12.7405 2.96573L13.2779 1.5653C12.4261 1.23842 11.498 1.25 10.0298 1.25V2.75ZM15.8947 3.49618C14.8087 2.51878 14.1297 1.89214 13.2779 1.5653L12.7405 2.96573C13.2727 3.16993 13.7215 3.55836 14.8912 4.61112L15.8947 3.49618ZM10 21.25C8.09318 21.25 6.73851 21.2484 5.71085 21.1102C4.70476 20.975 4.12511 20.7213 3.7019 20.2981L2.64124 21.3588C3.38961 22.1071 4.33855 22.4392 5.51098 22.5969C6.66182 22.7516 8.13558 22.75 10 22.75V21.25ZM1.25 14C1.25 15.8644 1.24841 17.3382 1.40313 18.489C1.56076 19.6614 1.89288 20.6104 2.64124 21.3588L3.7019 20.2981C3.27869 19.8749 3.02502 19.2952 2.88976 18.2892C2.75159 17.2615 2.75 15.9068 2.75 14H1.25ZM14 22.75C15.8644 22.75 17.3382 22.7516 18.489 22.5969C19.6614 22.4392 20.6104 22.1071 21.3588 21.3588L20.2981 20.2981C19.8749 20.7213 19.2952 20.975 18.2892 21.1102C17.2615 21.2484 15.9068 21.25 14 21.25V22.75ZM21.25 14C21.25 15.9068 21.2484 17.2615 21.1102 18.2892C20.975 19.2952 20.7213 19.8749 20.2981 20.2981L21.3588 21.3588C22.1071 20.6104 22.4392 19.6614 22.5969 18.489C22.7516 17.3382 22.75 15.8644 22.75 14H21.25ZM2.75 10C2.75 8.09318 2.75159 6.73851 2.88976 5.71085C3.02502 4.70476 3.27869 4.12511 3.7019 3.7019L2.64124 2.64124C1.89288 3.38961 1.56076 4.33855 1.40313 5.51098C1.24841 6.66182 1.25 8.13558 1.25 10H2.75ZM10.0298 1.25C8.15538 1.25 6.67442 1.24842 5.51887 1.40307C4.34232 1.56054 3.39019 1.8923 2.64124 2.64124L3.7019 3.7019C4.12453 3.27928 4.70596 3.02525 5.71785 2.88982C6.75075 2.75158 8.11311 2.75 10.0298 2.75V1.25Z"
+                    fill="#1C274C"
+                  ></path>
+                  <path
+                    d="M6 14.5H14"
+                    stroke="#1C274C"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M6 18H11.5"
+                    stroke="#1C274C"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M13 2.5V5C13 7.35702 13 8.53553 13.7322 9.26777C14.4645 10 15.643 10 18 10H22"
+                    stroke="#1C274C"
+                    stroke-width="1.5"
+                  ></path>
+                </g>
+              </svg>
+              <p>Google Docs</p>
+              <span>Used for beginners</span>
+            </div>
+            <div class="product-detail">
+              <h2 class="profuct-name">Google Docs</h2>
+              <div class="level">
+                <div class="level-dot green"></div>
+                <div class="level-dot"></div>
+                <div class="level-dot"></div>
+                <select name="course-level">
+                  <option value="basic">LV 1-3</option>
+                  <option value="intermediate">LV 2-3</option>
+                  <option value="advance">LV 3-3</option>
+                </select>
+              </div>
+              <p>THB 150</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-icon">
+              <svg
+                width="36px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M5.73708 6.54391V18.9857C5.73708 19.7449 6.35257 20.3604 7.11182 20.3604H16.8893C17.6485 20.3604 18.264 19.7449 18.264 18.9857V6.54391M2.90906 6.54391H21.0909"
+                    stroke="#5FDDB6"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M8 6V4.41421C8 3.63317 8.63317 3 9.41421 3H14.5858C15.3668 3 16 3.63317 16 4.41421V6"
+                    stroke="#5FDDB6"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <div class="course-card">
+              <svg
+                width="30px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M15.3929 4.05365L14.8912 4.61112L15.3929 4.05365ZM19.3517 7.61654L18.85 8.17402L19.3517 7.61654ZM21.654 10.1541L20.9689 10.4592V10.4592L21.654 10.1541ZM3.17157 20.8284L3.7019 20.2981H3.7019L3.17157 20.8284ZM20.8284 20.8284L20.2981 20.2981L20.2981 20.2981L20.8284 20.8284ZM14 21.25H10V22.75H14V21.25ZM2.75 14V10H1.25V14H2.75ZM21.25 13.5629V14H22.75V13.5629H21.25ZM14.8912 4.61112L18.85 8.17402L19.8534 7.05907L15.8947 3.49618L14.8912 4.61112ZM22.75 13.5629C22.75 11.8745 22.7651 10.8055 22.3391 9.84897L20.9689 10.4592C21.2349 11.0565 21.25 11.742 21.25 13.5629H22.75ZM18.85 8.17402C20.2034 9.3921 20.7029 9.86199 20.9689 10.4592L22.3391 9.84897C21.9131 8.89241 21.1084 8.18853 19.8534 7.05907L18.85 8.17402ZM10.0298 2.75C11.6116 2.75 12.2085 2.76158 12.7405 2.96573L13.2779 1.5653C12.4261 1.23842 11.498 1.25 10.0298 1.25V2.75ZM15.8947 3.49618C14.8087 2.51878 14.1297 1.89214 13.2779 1.5653L12.7405 2.96573C13.2727 3.16993 13.7215 3.55836 14.8912 4.61112L15.8947 3.49618ZM10 21.25C8.09318 21.25 6.73851 21.2484 5.71085 21.1102C4.70476 20.975 4.12511 20.7213 3.7019 20.2981L2.64124 21.3588C3.38961 22.1071 4.33855 22.4392 5.51098 22.5969C6.66182 22.7516 8.13558 22.75 10 22.75V21.25ZM1.25 14C1.25 15.8644 1.24841 17.3382 1.40313 18.489C1.56076 19.6614 1.89288 20.6104 2.64124 21.3588L3.7019 20.2981C3.27869 19.8749 3.02502 19.2952 2.88976 18.2892C2.75159 17.2615 2.75 15.9068 2.75 14H1.25ZM14 22.75C15.8644 22.75 17.3382 22.7516 18.489 22.5969C19.6614 22.4392 20.6104 22.1071 21.3588 21.3588L20.2981 20.2981C19.8749 20.7213 19.2952 20.975 18.2892 21.1102C17.2615 21.2484 15.9068 21.25 14 21.25V22.75ZM21.25 14C21.25 15.9068 21.2484 17.2615 21.1102 18.2892C20.975 19.2952 20.7213 19.8749 20.2981 20.2981L21.3588 21.3588C22.1071 20.6104 22.4392 19.6614 22.5969 18.489C22.7516 17.3382 22.75 15.8644 22.75 14H21.25ZM2.75 10C2.75 8.09318 2.75159 6.73851 2.88976 5.71085C3.02502 4.70476 3.27869 4.12511 3.7019 3.7019L2.64124 2.64124C1.89288 3.38961 1.56076 4.33855 1.40313 5.51098C1.24841 6.66182 1.25 8.13558 1.25 10H2.75ZM10.0298 1.25C8.15538 1.25 6.67442 1.24842 5.51887 1.40307C4.34232 1.56054 3.39019 1.8923 2.64124 2.64124L3.7019 3.7019C4.12453 3.27928 4.70596 3.02525 5.71785 2.88982C6.75075 2.75158 8.11311 2.75 10.0298 2.75V1.25Z"
+                    fill="#1C274C"
+                  ></path>
+                  <path
+                    d="M6 14.5H14"
+                    stroke="#1C274C"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M6 18H11.5"
+                    stroke="#1C274C"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M13 2.5V5C13 7.35702 13 8.53553 13.7322 9.26777C14.4645 10 15.643 10 18 10H22"
+                    stroke="#1C274C"
+                    stroke-width="1.5"
+                  ></path>
+                </g>
+              </svg>
+              <p>Google Slides</p>
+              <span>Used for beginners</span>
+            </div>
+            <div class="product-detail">
+              <h2 class="profuct-name">Google Slides</h2>
+              <div class="level">
+                <div class="level-dot green"></div>
+                <div class="level-dot green"></div>
+                <div class="level-dot green"></div>
+                <div class="level-dot"></div>
+                <select name="course-level">
+                  <option value="basic">LV 1-4</option>
+                  <option value="intermediate">LV 2-4</option>
+                  <option value="advance">LV 3-4</option>
+                  <option value="guru" selected>LV 3-4</option>
+                </select>
+              </div>
+              <p>THB 150</p>
+            </div>
+          </div>
+        </div>
+        <div class="order-info">
+          <h2>Order Info</h2>
+          <div class="before-promo">
+            <h3>Subtotal</h3>
+            <h3>THB 300</h3>
+          </div>
+          <div class="promo">
+            <svg
+              width="40px"
+              fill="#5edbb6"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  d="M15,6 C15,6.55228475 14.5522847,7 14,7 C13.4477153,7 13,6.55228475 13,6 L3,6 L3,7.99946819 C4.2410063,8.93038753 5,10.3994926 5,12 C5,13.6005074 4.2410063,15.0696125 3,16.0005318 L3,18 L13,18 C13,17.4477153 13.4477153,17 14,17 C14.5522847,17 15,17.4477153 15,18 L21,18 L21,16.0005318 C19.7589937,15.0696125 19,13.6005074 19,12 C19,10.3994926 19.7589937,8.93038753 21,7.99946819 L21,6 L15,6 Z M23,18 C23,19.1045695 22.1045695,20 21,20 L3,20 C1.8954305,20 1,19.1045695 1,18 L1,14.8880798 L1.49927404,14.5992654 C2.42112628,14.0660026 3,13.0839642 3,12 C3,10.9160358 2.42112628,9.93399737 1.49927404,9.40073465 L1,9.11192021 L1,6 C1,4.8954305 1.8954305,4 3,4 L21,4 C22.1045695,4 23,4.8954305 23,6 L23,9.11192021 L22.500726,9.40073465 C21.5788737,9.93399737 21,10.9160358 21,12 C21,13.0839642 21.5788737,14.0660026 22.500726,14.5992654 L23,14.8880798 L23,18 Z M14,16 C13.4477153,16 13,15.5522847 13,15 C13,14.4477153 13.4477153,14 14,14 C14.5522847,14 15,14.4477153 15,15 C15,15.5522847 14.5522847,16 14,16 Z M14,13 C13.4477153,13 13,12.5522847 13,12 C13,11.4477153 13.4477153,11 14,11 C14.5522847,11 15,11.4477153 15,12 C15,12.5522847 14.5522847,13 14,13 Z M14,10 C13.4477153,10 13,9.55228475 13,9 C13,8.44771525 13.4477153,8 14,8 C14.5522847,8 15,8.44771525 15,9 C15,9.55228475 14.5522847,10 14,10 Z"
+                ></path>
+              </g>
+            </svg>
+            <input type="text" name="promo-code" placeholder="Promotion Code" />
+            <button type="submit" value="promo" class="promo-btn">Apply</button>
+          </div>
+          <div class="total-payment">
+            <h3>Total Payment</h3>
+            <p class="total-price">THB 300</p>
+          </div>
+          <button type="submit" value="login" class="login-btn">
+            LOG IN TO CHECKOUT
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

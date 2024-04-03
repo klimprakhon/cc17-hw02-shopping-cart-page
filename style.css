@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  font-family: Kanit, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+header {
+  border-bottom: 1px solid #c3cbd9;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  width: 1120px;
+  margin: auto;
+  padding: 0 12px;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-left img {
+  width: 189px;
+  height: 32px;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #1f2d4e;
+  font-weight: 700;
+  margin: 14px;
+  /* #7a89a6 Dark grey */
+  /* #c3cbd9 Light grey */
+}
+
+.nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-right svg {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.nav-right .in-cart {
+  position: relative;
+}
+
+.nav-right .in-cart .product-count {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff0000;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  top: 10%;
+  left: 55%;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #1f2d4e;
+  font-weight: 700;
+}
+
+main {
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+}
+
+main h1 {
+  font-size: 3rem;
+  width: 100%;
+}
+
+main .shopping-cart {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product-list .product-card {
+  background-color: #fff;
+  display: flex;
+  padding-left: 20px;
+  gap: 20px;
+  align-items: center;
+  width: 400px;
+  height: 160px;
+  border-radius: 18px;
+}
+
+.product-card .product-icon svg {
+  border: 2px solid #5edbb6;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.product-card .course-card {
+  background-color: #87bffc;
+  width: 110px;
+  height: 110px;
+  border-radius: 15px;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-top: 16px;
+  gap: 4px;
+}
+
+.course-card svg {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.course-card p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.course-card span {
+  color: #fff;
+  font-size: 9px;
+  font-weight: 200;
+}
+
+.product-detail h2 {
+  color: #3c424e;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.product-detail .level {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.level .level-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f4f4f4;
+}
+
+.level .green {
+  background-color: #5edbb6;
+}
+
+.level .level-dot:last-of-type {
+  margin-right: 4px;
+}
+
+.level select {
+  font-family: "Kanit", sans-serif;
+  border: 1px solid #5edbb6;
+  border-radius: 4px;
+}
+
+.product-detail p {
+  color: #c3cbd9;
+  font-size: 14px;
+}
+
+.shopping-cart .order-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #c3cbd9;
+  border-radius: 18px;
+  width: 100%;
+  gap: 10px;
+}
+
+.order-info .before-promo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.before-promo h3 {
+  color: #c3cbd9;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.order-info .promo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo {
+  border-bottom: 1px solid #e2e2e7;
+  padding: 18px 0;
+}
+
+.promo svg {
+  width: 30px;
+  height: 35px;
+  padding: 6px;
+}
+
+.promo input[type="text"] {
+  width: 60%;
+  border: 1px solid #c3cbd9;
+  border-radius: 4px;
+  padding: 8px;
+  font-family: "Kanit", sans-serif;
+}
+
+.promo input[type="text"]::placeholder {
+  color: #c3cbd9;
+}
+
+.promo button {
+  font-family: "Kanit", sans-serif;
+  color: #5edbb6;
+  border: 1px solid #5edbb6;
+  width: 25%;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+}
+
+.order-info .total-payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.total-payment h3 {
+  color: #7a89a6;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.total-payment p {
+  color: #5edbb6;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.order-info button.login-btn {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  background-color: #5edbb6;
+  border: none;
+  height: 32px;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.order-info button.login-btn:hover {
+  box-shadow: 5px 10px 10px -4px rgba(94, 219, 182, 0.45);
+}
